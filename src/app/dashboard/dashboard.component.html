@@ -1,0 +1,36 @@
+<div *ngIf="userData.length; else noDataTemplate">
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Country</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Date Of Birth</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let user of userData; let i = index">
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.phone }}</td>
+        <td>{{ user.country }}</td>
+        <td>{{ user.state }}</td>
+        <td>{{ user.city }}</td>
+        <td>{{ user.dateOfBirth }}</td>
+        <td [ngStyle]="{ color: getStatusColor(user.status) }">{{ user.status }}</td>
+        <td>
+            <button class="edit-btn" (click)="editUser(i)">Edit</button>
+            <button class="delete-btn" (click)="deleteUser(i)">Delete</button>
+            <button class="add-btn" (click)="addUser()">Add</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+ <ng-template #noDataTemplate>
+    <p>No Data Found</p>
+  </ng-template>
+  

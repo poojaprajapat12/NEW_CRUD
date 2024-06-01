@@ -1,0 +1,50 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+  .active-user {
+    font-weight: bold;
+  }
+  button {
+    padding: 5px 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .edit-btn {
+    background-color: #4CAF50;
+  }
+  .edit-btn:hover {
+    background-color: #45a049;
+  }
+  .delete-btn {
+    background-color: #f44336;
+  }
+  .delete-btn:hover {
+    background-color: #e53935;
+  }
+  .add-btn {
+    background-color: #008CBA;
+  }
+  .add-btn:hover {
+    background-color: #007bb5;
+  }
